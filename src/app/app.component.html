@@ -1,0 +1,18 @@
+<div class="container text-center">
+    <h1>{{ title }}</h1>
+  
+    <!-- Character Select Dropdown -->
+    <select class="row form-select d-block mx-auto mt-5" [(ngModel)]="selectedCharacter">
+      <option value="" disabled>Select a character</option>
+      <option *ngFor="let character of characters" [ngValue]="character">
+        {{ character.fullName }}
+      </option>
+    </select>
+  
+    <!-- Display Character Details -->
+    <div *ngIf="selectedCharacter" class="row mt-4">
+      <h2>{{ selectedCharacter.fullName }}</h2>
+      <p><strong>Title:</strong> {{ selectedCharacter.title }}</p>
+      <img [src]="selectedCharacter.imageUrl" alt="{{ selectedCharacter.fullName }}" class="img-fluid w-50 d-block mx-auto"/>
+    </div>
+  </div>
