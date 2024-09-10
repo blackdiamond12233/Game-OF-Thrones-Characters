@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "breakingBad": {
+    "gameOfThronesCharacters": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/breaking-bad",
+            "outputPath": "dist/gameOf-thrones-haracters",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -57,10 +57,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "breakingBad:build:production"
+              "buildTarget": "gameOfThronesCharacters:build:production"
             },
             "development": {
-              "buildTarget": "breakingBad:build:development"
+              "buildTarget": "gameOfThronesCharacters:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -68,7 +68,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "breakingBad:build"
+            "buildTarget": "gameOfThronesCharacters:build"
           }
         },
         "test": {
